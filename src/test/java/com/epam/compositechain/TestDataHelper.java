@@ -19,6 +19,16 @@ public class TestDataHelper {
     private static final Leaf THIRD_SENTENCE_FIRST_PARAGRAPH_THIRD = new Leaf("has. ", LeafType.WORD);
     private static final Leaf THIRD_SENTENCE_SECOND_PARAGRAPH_THIRD = new Leaf("Bye. ", LeafType.WORD);
 
+    private static final Leaf SENTENCE_FIRST = new Leaf("It [ 6 2 - 5 * ] has.", LeafType.WORD);
+    private static final Leaf SENTENCE_SECOND = new Leaf(" Bye.", LeafType.WORD);
+    private static final Component SENTENCE_ANSWER = new Composite(Arrays.asList(SENTENCE_FIRST, SENTENCE_SECOND));
+
+    private static final Leaf PARAGRAPH_FIRST = new Leaf("It [ 1 6 + 6 * ] has. \n", LeafType.WORD);
+    private static final Leaf PARAGRAPH_SECOND = new Leaf("PageMaker Ipsum. \n", LeafType.WORD);
+    private static final Leaf PARAGRAPH_THIRD = new Leaf("It [ 6 2 - 5 * ] has. Bye. \n", LeafType.WORD);
+    private static final Component PARAGRAPH_ANSWER = new Composite(Arrays.asList(PARAGRAPH_FIRST, PARAGRAPH_SECOND, PARAGRAPH_THIRD));
+
+    
     private static final Component FIRST_SENTENCE = new Composite(Arrays.asList(
             FIRST_SENTENCE_FIRST_PARAGRAPH_FIRST, SECOND_SENTENCE_FIRST_PARAGRAPH_FIRST,
             THIRD_SENTENCE_FIRST_PARAGRAPH_FIRST));
@@ -72,5 +82,12 @@ public class TestDataHelper {
 
     public static Component getFourthSentence(){
         return FOURTH_SENTENCE;
+    }
+    
+      public static Component getSentenceForThenAnswerParagraph() {
+        return SENTENCE_ANSWER;
+    }
+    public static Component getParagraphForThenAnswerText() {
+        return PARAGRAPH_ANSWER;
     }
 }
